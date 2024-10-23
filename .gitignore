@@ -6,7 +6,6 @@ xml/
 html/
 Doxyfile.dox
 footer.html
-.github/
 *.ctu-info
 *.dump
 doxygen-awesome-css/
