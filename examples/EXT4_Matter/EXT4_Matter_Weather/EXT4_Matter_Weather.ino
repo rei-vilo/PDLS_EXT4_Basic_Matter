@@ -717,7 +717,8 @@ void loop()
         bufferWrite[0] = 0x00; // HDC20X0_TEMPERATURE_LOW
         hV_HAL_Wire_transfer(HDC_I2C, bufferWrite, 1, bufferRead, 2);
         temperature.value = bufferRead[0] + bufferRead[1] * 256.0;
-        temperature.value = temperature.value * 165.0 / 65536.0 - 40.0; // +273.15; // from °C to °K
+        temperature.value = (temperature.value * 165.0 / 65536.0) - (40.5 + 0.08 * (3.3 - 1.8)); // +273.15; // from °C to °K
+
 
         // Humidity
         bufferWrite[0] = 0x02; // HDC20X0_HUMIDITY_LOW
