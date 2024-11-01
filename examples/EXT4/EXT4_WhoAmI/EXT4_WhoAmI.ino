@@ -119,7 +119,6 @@ void displayWhoAmI()
 
 #endif  // DISPLAY_WHOAMI
 
-
 // Add setup code
 ///
 /// @brief Setup

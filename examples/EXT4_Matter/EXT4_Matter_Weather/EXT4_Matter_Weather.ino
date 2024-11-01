@@ -717,8 +717,11 @@ void loop()
         bufferWrite[0] = 0x00; // HDC20X0_TEMPERATURE_LOW
         hV_HAL_Wire_transfer(HDC_I2C, bufferWrite, 1, bufferRead, 2);
         temperature.value = bufferRead[0] + bufferRead[1] * 256.0;
+        // Standard equation 1
+        // temperature.value = temperature.value * 165.0 / 65536.0 - 40.0; // +273.15; // from °C to °K
+        //
+        // Highest accuracy with equation 2. Impact = (3.3 - 1.8) * 0.08 = 0.12°C
         temperature.value = (temperature.value * 165.0 / 65536.0) - (40.5 + 0.08 * (3.3 - 1.8)); // +273.15; // from °C to °K
-
 
         // Humidity
         bufferWrite[0] = 0x02; // HDC20X0_HUMIDITY_LOW
@@ -757,8 +760,8 @@ void loop()
 
         // Serial
         mySerial.print(formatString("Temperature = %5.1f < %5.1f < %5.1f oC, Humidity= %5.1f < %5.1f < %5.1f %%",
-                        temperature.minimum, temperature.value, temperature.maximum,
-                        humidity.minimum, humidity.value, humidity.maximum));
+                                    temperature.minimum, temperature.value, temperature.maximum,
+                                    humidity.minimum, humidity.value, humidity.maximum));
         mySerial.println();
 
         chrono32 = millis() + 10000; // 10 s
