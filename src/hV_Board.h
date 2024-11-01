@@ -49,8 +49,8 @@
 // Objects
 //
 ///
-/// @brief Class for Pervasive Displays EXT4 board
-/// @details Functions for EXT3.1 board
+/// @brief Class for Pervasive Displays EXT extension boards
+/// @details Functions for EXT extension boards
 /// * GPIO
 /// * SPI for LCD and external Flash and SRAM memory
 /// * I2C for touch and haptic feedback

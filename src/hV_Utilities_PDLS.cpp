@@ -361,5 +361,6 @@ void hV_Utilities_PDLS::debugVariant(uint8_t contextFilm)
             break;
     } // u_codeFilm
 
+    mySerial.println();
     while (0x01);
 }

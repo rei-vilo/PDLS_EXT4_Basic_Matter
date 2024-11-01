@@ -1,6 +1,7 @@
 ///
 /// @file hV_List_Screens.h
 /// @brief List of supported Pervasive Displays screens
+/// @note Legacy screens are listed in the corresponding screen libraries
 ///
 /// @details Project Pervasive Displays Library Suite
 /// @n Based on highView technology
@@ -296,8 +297,7 @@
 #define eScreen_EPD_417_KS_0D SCREEN(SIZE_417, FILM_K, DRIVER_D) ///< reference xE2417KS0Dx
 /// @todo eScreen_EPD_437_KS_0C not tested
 #define eScreen_EPD_437_KS_0C SCREEN(SIZE_437, FILM_K, DRIVER_C) ///< reference xE2437KS0Cx, not tested
-/// @todo eScreen_EPD_581_KS_0B not tested
-#define eScreen_EPD_581_KS_0B SCREEN(SIZE_581, FILM_K, DRIVER_B) ///< reference xE2581KS0Bx, not tested
+#define eScreen_EPD_581_KS_06 SCREEN(SIZE_581, FILM_K, DRIVER_6) ///< reference xE2581KS06x
 // /// @todo eScreen_EPD_741_KS_0B not tested
 // #define eScreen_EPD_741_KS_0B SCREEN(SIZE_741, FILM_K, DRIVER_B) ///< reference xE2741KS0Bx, not tested
 // /// @todo eScreen_EPD_969_KS_0B not tested
