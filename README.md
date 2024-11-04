@@ -138,7 +138,8 @@ Software
 
 Hardware
 
-+ Pervasive Displays EPD Extension Kit Gen 4 (EXT4)
+* Pervasive Displays EPD Extension Kit Gen 4 (EXT4)
+* Pervasive Displays E-paper Pervasive Displays Kit for Matter (EPDK-Matter) with Arduino Nano Matter
 
 ## Licence
 
