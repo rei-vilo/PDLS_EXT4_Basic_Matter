@@ -10,13 +10,14 @@ The Pervasive Displays Library Suite is specifically designed for the [Pervasive
 
 The **PDLS\_EXT4\_Basic\_Matter** library supports the screens
 
-* iTC [monochrome screens with wide temperature and embedded fast update](https://www.pervasivedisplays.com/products/?_sft_etc_itc=pu&_sft_temperature_range=m15c-to-p60c) (film `K`), up to 2.9". 
+* iTC [monochrome screens with wide temperature and embedded fast update](https://www.pervasivedisplays.com/products/?_sft_etc_itc=pu&_sft_temperature_range=m15c-to-p60c) (film `K`), up to 2.9";
 
 <!-- <center>![](img/Logo-PDI-white.png) ![](img/Logo_Arduino.png) ![](img/Logo_SiLabs.png)</center> -->
 
-the board
+the boards
 
-* Pervasive Displays [EPD Extension Kit Gen 4 (EXT4)](https://www.pervasivedisplays.com/product/epd-extension-kit-gen-4-EXT4/) and EXT4-to-Nano adapter boards;
+* Pervasive Displays [EPD Extension Kit Gen 4 (EXT4)](https://www.pervasivedisplays.com/product/epd-extension-kit-gen-4-EXT4/), 
+* Pervasive Displays EXT4-to-Nano adapter;
 
 and the kit
 
