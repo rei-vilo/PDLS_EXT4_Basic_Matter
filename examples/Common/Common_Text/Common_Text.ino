@@ -130,6 +130,9 @@ void setup()
     // Start
     mySerial.println("begin... ");
     myScreen.begin();
+
+    myScreen.regenerate();
+    
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
     mySerial.println("Characters... ");
