@@ -6,7 +6,7 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Aug 2024
+/// @date 21 Nov 2024
 /// @version 110
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
@@ -14,7 +14,7 @@
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
 /// @see ReadMe.txt for references
-/// @n
+/// @n Step 110 Added list of colours
 ///
 
 // Screen
@@ -80,26 +80,36 @@ void setup()
     mySerial.println();
 
     myRGB.begin();
+    mySerial.println("Black");
     myRGB.set_pixel(0, 0, 0);
 
     delay(500);
-    myRGB.set_pixel(64, 64, 64);
+    mySerial.println("White");
+    myRGB.set_pixel(21, 21, 21);
     delay(500);
+    mySerial.println("Black");
     myRGB.set_pixel(0, 0, 0);
     delay(500);
 
+    mySerial.println("Red");
     myRGB.set_pixel(64, 0, 0);
     delay(500);
-    myRGB.set_pixel(64, 64, 0);
+    mySerial.println("Yellow");
+    myRGB.set_pixel(32, 32, 0);
     delay(500);
+    mySerial.println("Green");
     myRGB.set_pixel(0, 64, 0);
     delay(500);
-    myRGB.set_pixel(0, 64, 64);
+    mySerial.println("Cyan");
+    myRGB.set_pixel(0, 32, 32);
     delay(500);
+    mySerial.println("Blue");
     myRGB.set_pixel(0, 0, 64);
     delay(500);
-    myRGB.set_pixel(64, 0, 64);
+    mySerial.println("Violet");
+    myRGB.set_pixel(32, 0, 32);
     delay(500);
+    mySerial.println("Black");
     myRGB.set_pixel(0, 0, 0);
 
     // wsFromTo(0, 0, 0, 64, 0, 0, 16, 100);

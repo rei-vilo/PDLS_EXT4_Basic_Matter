@@ -129,8 +129,7 @@ void hV_Board::b_resume()
             pinMode(b_pin.cardCS, INPUT);
         }
 
-        // EXT4 GPIOs
-#if (USE_EXT_BOARD == BOARD_EXT4)
+#if (USE_EXT_BOARD == BOARD_EXT4) // EXT4 GPIOs
 
         if (b_pin.button != NOT_CONNECTED) // generic
         {

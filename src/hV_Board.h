@@ -49,7 +49,7 @@
 // Objects
 //
 ///
-/// @brief Class for Pervasive Displays EXT extension boards
+/// @brief Class for Pervasive Displays EXT3, EXT3.1 and EXT3-Touch, EXT4 boards
 /// @details Functions for EXT extension boards
 /// * GPIO
 /// * SPI for LCD and external Flash and SRAM memory

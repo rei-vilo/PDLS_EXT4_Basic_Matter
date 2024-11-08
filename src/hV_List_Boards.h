@@ -12,8 +12,8 @@
 ///     * 2.3 Deprecated boards
 ///
 /// @author Rei Vilo
-/// @date 21 Sep 2024
-/// @version 806
+/// @date 21 Nov 2024
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// @copyright All rights reserved
@@ -48,7 +48,7 @@
 ///
 /// @brief Release
 ///
-#define hV_LIST_BOARDS_RELEASE 806
+#define hV_LIST_BOARDS_RELEASE 810
 
 ///
 /// @brief Not connected pin
