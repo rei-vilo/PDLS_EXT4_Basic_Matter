@@ -71,7 +71,7 @@ void wait(uint8_t second)
 ///
 void displayPalette(bool flag = true)
 {
-    myScreen.setOrientation(7);
+    myScreen.setOrientation(ORIENTATION_LANDSCAPE);
 
     uint16_t x0, y0, dx, dy, maxSize, colour;
     maxSize = min((myScreen.screenSizeX() * 10 / 50), (myScreen.screenSizeY() * 10 / 35));
