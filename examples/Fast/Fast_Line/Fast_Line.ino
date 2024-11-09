@@ -131,9 +131,8 @@ void setup()
 
 #endif // DISPLAY_FAST_LINE
 
-    mySerial.println("White... ");
-    myScreen.clear();
-    flush_ms();
+    mySerial.println("Regenerate... ");
+    myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();

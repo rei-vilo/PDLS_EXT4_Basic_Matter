@@ -106,9 +106,8 @@ void setup()
     displayOrientation();
     wait(8);
 
-    mySerial.println("White... ");
-    myScreen.clear();
-    myScreen.flush();
+    mySerial.println("Regenerate... ");
+    myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();

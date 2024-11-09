@@ -151,9 +151,8 @@ void setup()
 
 #endif // DISPLAY_WHOAMI
 
-    mySerial.println("White... ");
-    myScreen.clear();
-    myScreen.flush();
+    mySerial.println("Regenerate... ");
+    myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();

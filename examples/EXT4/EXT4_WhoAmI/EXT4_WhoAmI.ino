@@ -90,7 +90,8 @@ void displayWhoAmI()
     y += dy;
     myScreen.gText(x, y, formatString("%8s %i x %i", "Size", myScreen.screenSizeX(), myScreen.screenSizeY()));
     y += dy;
-    myScreen.gText(x, y, formatString("%8s %s", "Number", myScreen.screenNumber().c_str()));
+    String number = myScreen.screenNumber();
+    myScreen.gText(x, y, formatString("%8s %s", "Number", number.c_str()));
     y += dy;
     myScreen.gText(x, y, formatString("%8s %s v%i.%i.%i", "PDLS", SCREEN_EPD_EXT3_VARIANT, SCREEN_EPD_EXT3_RELEASE / 100, (SCREEN_EPD_EXT3_RELEASE / 10) % 10, SCREEN_EPD_EXT3_RELEASE % 10));
     y += dy;
@@ -147,9 +148,7 @@ void setup()
 
 #endif  // DISPLAY_WHOAMI
 
-    mySerial.println("White... ");
-    // myScreen.clear();
-    // myScreen.flush();
+    mySerial.println("Regenerate... ");
     myScreen.regenerate();
 
     mySerial.println("=== ");

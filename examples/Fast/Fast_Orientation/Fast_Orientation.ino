@@ -115,9 +115,8 @@ void setup()
 
 #endif // DISPLAY_FAST_ORIENTATION
 
-    mySerial.println("White... ");
-    myScreen.clear();
-    flush_ms();
+    mySerial.println("Regenerate... ");
+    myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();

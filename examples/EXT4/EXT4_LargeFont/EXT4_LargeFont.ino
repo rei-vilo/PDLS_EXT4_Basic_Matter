@@ -145,9 +145,7 @@ void setup()
 
 #endif  // DISPLAY_MULTIPLIER
 
-    mySerial.println("White... ");
-    // myScreen.clear();
-    // myScreen.flush();
+    mySerial.println("Regenerate... ");
     myScreen.regenerate();
 
     mySerial.println("=== ");

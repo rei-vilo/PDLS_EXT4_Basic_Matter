@@ -564,8 +564,9 @@ void setup()
     // Start
     myScreen.begin();
     myScreen.setPowerProfile(POWER_MODE_AUTO, POWER_SCOPE_GPIO_ONLY);
-    myScreen.setOrientation(3);
     myScreen.regenerate(); // Clear buffer and screen
+
+    myScreen.setOrientation(3);
 
     // --- WS2812
     myRGB.begin();

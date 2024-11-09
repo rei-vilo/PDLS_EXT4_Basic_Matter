@@ -130,9 +130,6 @@ void setup()
     // Start
     mySerial.println("begin... ");
     myScreen.begin();
-
-    myScreen.regenerate();
-    
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
     mySerial.println("Characters... ");
@@ -140,9 +137,8 @@ void setup()
     displayCharacters();
     wait(8);
 
-    mySerial.println("White... ");
-    myScreen.clear();
-    myScreen.flush();
+    mySerial.println("Regenerate... ");
+    myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();
