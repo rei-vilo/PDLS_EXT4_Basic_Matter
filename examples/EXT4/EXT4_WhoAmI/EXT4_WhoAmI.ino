@@ -88,10 +88,10 @@ void displayWhoAmI()
 
     myScreen.gText(x, y, formatString("%8s %s", "Screen", myScreen.WhoAmI().c_str()));
     y += dy;
-    myScreen.gText(x, y, formatString("%8s %i x %i", "Size", myScreen.screenSizeX(), myScreen.screenSizeY()));
+    myScreen.gText(x, y, formatString("%8s %ix%i", "Size", myScreen.screenSizeX(), myScreen.screenSizeY()));
     y += dy;
-    String number = myScreen.screenNumber();
-    myScreen.gText(x, y, formatString("%8s %s", "Number", number.c_str()));
+    String text = myScreen.screenNumber();
+    myScreen.gText(x, y, formatString("%8s %s", "Number", text.c_str()));
     y += dy;
     myScreen.gText(x, y, formatString("%8s %s v%i.%i.%i", "PDLS", SCREEN_EPD_EXT3_VARIANT, SCREEN_EPD_EXT3_RELEASE / 100, (SCREEN_EPD_EXT3_RELEASE / 10) % 10, SCREEN_EPD_EXT3_RELEASE % 10));
     y += dy;
