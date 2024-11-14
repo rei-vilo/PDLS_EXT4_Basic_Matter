@@ -46,7 +46,6 @@
 // Define structures and classes
 
 // Define variables and constants
-
 // --- Fast
 pins_t myBoard = boardArduinoNanoMatter;
 // pins_t myBoard = boardSiLabsBG24Explorer;

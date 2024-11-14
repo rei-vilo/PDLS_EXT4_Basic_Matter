@@ -49,7 +49,6 @@
 // Define structures and classes
 
 // Define variables and constants
-
 // PDLS
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, boardArduinoNanoMatter);
 // Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, boardSiLabsBG24Explorer);

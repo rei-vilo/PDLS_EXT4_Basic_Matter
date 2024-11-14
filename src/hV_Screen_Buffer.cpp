@@ -603,7 +603,9 @@ void hV_Screen_Buffer::gText(uint16_t x0, uint16_t y0,
     uint8_t line, line1, line2, line3;
     uint16_t x, y;
     uint8_t i, j, k;
+
 #if (MAX_FONT_SIZE > 0)
+
     if (f_fontSize == 0)
     {
         for (k = 0; k < text.length(); k++)
@@ -615,6 +617,7 @@ void hV_Screen_Buffer::gText(uint16_t x0, uint16_t y0,
                 line = f_getCharacter(c, i);
 
                 for (j = 0; j < 8; j++)
+                {
                     if (bitRead(line, j))
                     {
                         point(x0 + 6 * k + i, y0 + j, textColour);
@@ -623,10 +626,13 @@ void hV_Screen_Buffer::gText(uint16_t x0, uint16_t y0,
                     {
                         point(x0 + 6 * k + i, y0 + j, backColour);
                     }
+                }
             }
         }
     }
+
 #if (MAX_FONT_SIZE > 1)
+
     else if (f_fontSize == 1)
     {
         for (k = 0; k < text.length(); k++)
@@ -660,7 +666,9 @@ void hV_Screen_Buffer::gText(uint16_t x0, uint16_t y0,
             }
         }
     }
+
 #if (MAX_FONT_SIZE > 2)
+
     else if (f_fontSize == 2)
     {
 
@@ -696,6 +704,7 @@ void hV_Screen_Buffer::gText(uint16_t x0, uint16_t y0,
         }
     }
 #if (MAX_FONT_SIZE > 3)
+
     else if (f_fontSize == 3)
     {
         for (k = 0; k < text.length(); k++)
@@ -762,6 +771,7 @@ void hV_Screen_Buffer::gTextLarge(uint16_t x0, uint16_t y0,
     setPenSolid(true);
 
 #if (MAX_FONT_SIZE > 0)
+
     if (f_fontSize == 0)
     {
         for (k = 0; k < text.length(); k++)
@@ -790,6 +800,7 @@ void hV_Screen_Buffer::gTextLarge(uint16_t x0, uint16_t y0,
     }
 
 #if (MAX_FONT_SIZE > 1)
+
     else if (f_fontSize == 1)
     {
         for (k = 0; k < text.length(); k++)
@@ -827,6 +838,7 @@ void hV_Screen_Buffer::gTextLarge(uint16_t x0, uint16_t y0,
     }
 
 #if (MAX_FONT_SIZE > 2)
+
     else if (f_fontSize == 2)
     {
 
@@ -863,7 +875,9 @@ void hV_Screen_Buffer::gTextLarge(uint16_t x0, uint16_t y0,
             }
         }
     }
+
 #if (MAX_FONT_SIZE > 3)
+
     else if (f_fontSize == 3)
     {
         for (k = 0; k < text.length(); k++)

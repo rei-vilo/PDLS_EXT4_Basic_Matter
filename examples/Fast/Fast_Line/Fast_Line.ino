@@ -9,10 +9,19 @@
 /// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
-/// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+/// @copyright All rights reserved
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
-/// @see ReadMe.txt for references
+/// * Basic edition: for hobbyists and for basic usage
+/// @n Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+///
+/// * Evaluation edition: for professionals or organisations, no commercial usage
+/// @n All rights reserved
+///
+/// * Commercial edition: for professionals or organisations, commercial usage
+/// @n All rights reserved
+///
+/// @see ReadMe.md for references
 /// @n
 ///
 
@@ -118,7 +127,8 @@ void setup()
     mySerial.println("=== " __DATE__ " " __TIME__);
     mySerial.println();
 
-    mySerial.print("begin... ");
+    // Start
+    mySerial.println("begin... ");
     myScreen.begin();
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 

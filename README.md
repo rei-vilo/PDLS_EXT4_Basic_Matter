@@ -124,7 +124,7 @@ Software
 
 Hardware
 
-* [Connecting the Pervasive Displays e-Paper EPD Extension Kit Gen 4](https://embeddedcomputing.weebly.com/connecting-the-e-paper-epd-extension-kit-gen-4.html)
+* [Connecting the Pervasive Displays e-Paper EPD Extension Kit Gen 4](https://embeddedcomputing.weebly.com/connecting-the-pervasive-displays-ext4.html)
 
 ## Configuration
 
