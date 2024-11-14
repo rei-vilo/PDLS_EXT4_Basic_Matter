@@ -7,7 +7,7 @@
 ///
 /// @author Rei Vilo
 /// @date 21 Nov 2024
-/// @version 110
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)

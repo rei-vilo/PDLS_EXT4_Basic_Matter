@@ -20,8 +20,8 @@
 /// @author Tamas Jozsi (Silicon Labs)
 ///
 /// @author Rei Vilo
-/// @date 21 Aug 2024
-/// @version 110
+/// @date 21 Nov 2024
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// * 2024-06-06 Rei Vilo (Pervasive Displays)
@@ -50,8 +50,8 @@ MatterColorLightbulb myMatterRGB;
 // PDLS
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 805)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 805
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK
@@ -76,7 +76,7 @@ pins_t myBoard = boardArduinoNanoMatter;
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 
 #define MATTER_EXAMPLE_NAME "Matter RGB"
-#define MATTER_EXAMPLE_RELEASE 109
+#define MATTER_EXAMPLE_RELEASE 810
 
 // WS2813
 ezWS2812gpio myRGB(1, myBoard.ledData);
@@ -178,7 +178,7 @@ void displayQR(const char * code)
     uint16_t x = myScreen.screenSizeX();
     uint16_t y = myScreen.screenSizeY();
     uint8_t k = qrcode.size;
-    uint16_t dxy = min(x, y);
+    uint16_t dxy = hV_HAL_min(x, y);
     uint16_t dz = dxy / k;
     uint16_t dxy0 = (dxy - k * dz) / 2;
     uint16_t dx0 = x - dxy + dxy0;

@@ -1038,7 +1038,7 @@ bool Screen_EPD_EXT4_Fast::s_orientCoordinates(uint16_t & x, uint16_t & y)
             {
                 x = v_screenSizeH - 1 - x;
                 y = v_screenSizeV - 1 - y;
-                swap(x, y);
+                hV_HAL_swap(x, y);
                 _flagResult = RESULT_SUCCESS;
             }
             break;
@@ -1056,7 +1056,7 @@ bool Screen_EPD_EXT4_Fast::s_orientCoordinates(uint16_t & x, uint16_t & y)
 
             if ((x < v_screenSizeH) and (y < v_screenSizeV))
             {
-                swap(x, y);
+                hV_HAL_swap(x, y);
                 _flagResult = RESULT_SUCCESS;
             }
             break;

@@ -6,8 +6,8 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Aug 2024
-/// @version 805
+/// @date 21 Nov 2024
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
@@ -20,8 +20,8 @@
 // Screen
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 805)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 805
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK
@@ -74,7 +74,7 @@ void displayPalette(bool flag = true)
     myScreen.setOrientation(ORIENTATION_LANDSCAPE);
 
     uint16_t x0, y0, dx, dy, maxSize, colour;
-    maxSize = min((myScreen.screenSizeX() * 10 / 50), (myScreen.screenSizeY() * 10 / 35));
+    maxSize = hV_HAL_min((myScreen.screenSizeX() * 10 / 50), (myScreen.screenSizeY() * 10 / 35));
     dx = (myScreen.screenSizeX() - maxSize * 50 / 10) / 2;
     dy = (myScreen.screenSizeY() - maxSize * 35 / 10) / 2;
 

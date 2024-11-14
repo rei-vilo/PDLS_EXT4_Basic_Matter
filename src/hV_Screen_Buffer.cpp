@@ -226,7 +226,7 @@ void hV_Screen_Buffer::line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, 
     {
         if (y1 > y2)
         {
-            swap(y1, y2);
+            hV_HAL_swap(y1, y2);
         }
         for (uint16_t y = y1; y <= y2; y++)
         {
@@ -237,7 +237,7 @@ void hV_Screen_Buffer::line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, 
     {
         if (x1 > x2)
         {
-            swap(x1, x2);
+            hV_HAL_swap(x1, x2);
         }
         for (uint16_t x = x1; x <= x2; x++)
         {
@@ -254,14 +254,14 @@ void hV_Screen_Buffer::line(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, 
         bool flag = abs(wy2 - wy1) > abs(wx2 - wx1);
         if (flag)
         {
-            swap(wx1, wy1);
-            swap(wx2, wy2);
+            hV_HAL_swap(wx1, wy1);
+            hV_HAL_swap(wx2, wy2);
         }
 
         if (wx1 > wx2)
         {
-            swap(wx1, wx2);
-            swap(wy1, wy2);
+            hV_HAL_swap(wx1, wx2);
+            hV_HAL_swap(wy1, wy2);
         }
 
         int16_t dx = wx2 - wx1;
@@ -322,11 +322,11 @@ void hV_Screen_Buffer::rectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t
     {
         if (x1 > x2)
         {
-            swap(x1, x2);
+            hV_HAL_swap(x1, x2);
         }
         if (y1 > y2)
         {
-            swap(y1, y2);
+            hV_HAL_swap(y1, y2);
         }
         for (uint16_t x = x1; x <= x2; x++)
         {
@@ -373,13 +373,13 @@ void hV_Screen_Buffer::s_triangleArea(uint16_t x1, uint16_t y1, uint16_t x2, uin
 
     if (dy1 > dx1)
     {
-        swap(dx1, dy1); // swap values
+        hV_HAL_swap(dx1, dy1); // swap values
         changed1 = true;
     }
 
     if (dy2 > dx2)
     {
-        swap(dx2, dy2); // swap values
+        hV_HAL_swap(dx2, dy2); // swap values
         changed2 = true;
     }
 
@@ -468,14 +468,14 @@ void hV_Screen_Buffer::triangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t 
             b = false;
             if ((b == false) and (y1 > y2))
             {
-                swap(x1, x2);
-                swap(y1, y2);
+                hV_HAL_swap(x1, x2);
+                hV_HAL_swap(y1, y2);
                 b = true;
             }
             if ((b == false) and (y2 > y3))
             {
-                swap(x3, x2);
-                swap(y3, y2);
+                hV_HAL_swap(x3, x2);
+                hV_HAL_swap(y3, y2);
                 b = true;
             }
         }

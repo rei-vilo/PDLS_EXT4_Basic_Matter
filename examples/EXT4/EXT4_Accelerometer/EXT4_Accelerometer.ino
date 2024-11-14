@@ -6,8 +6,8 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Aug 2024
-/// @version 108
+/// @date 21 Nov 2024
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
@@ -20,8 +20,8 @@
 // PDLS
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 805)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 805
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK
@@ -182,7 +182,7 @@ void loop()
             uint16_t y = myScreen.screenSizeY();
             uint16_t dx = x / 2;
             uint16_t dy = y / 2;
-            uint16_t dz = min(dx, dy) / 3;
+            uint16_t dz = hV_HAL_min(dx, dy) / 3;
 
             myScreen.setPenSolid(true);
             myScreen.triangle(dx, dy - dz, dx + dz, dy, dx - dz, dy, myColours.black);

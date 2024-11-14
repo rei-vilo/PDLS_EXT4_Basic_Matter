@@ -18,8 +18,8 @@
 /// @author Tamas Jozsi (Silicon Labs)
 ///
 /// @author Rei Vilo
-/// @date 21 Aug 2024
-/// @version 109
+/// @date 21 Nov 2024
+/// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// * 2024-06-06 Rei Vilo (Pervasive Displays)
@@ -53,8 +53,8 @@ MatterHumidity myMatterHumidity;
 // PDLS
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 805)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 805
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK
@@ -79,7 +79,7 @@ pins_t myBoard = boardArduinoNanoMatter;
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 
 #define MATTER_EXAMPLE_NAME "Matter Weather"
-#define MATTER_EXAMPLE_RELEASE 109
+#define MATTER_EXAMPLE_RELEASE 810
 
 // HDC2080
 
@@ -194,7 +194,7 @@ void displayQR(const char * code)
     uint16_t x = myScreen.screenSizeX();
     uint16_t y = myScreen.screenSizeY();
     uint8_t k = qrcode.size;
-    uint16_t dxy = min(x, y);
+    uint16_t dxy = hV_HAL_min(x, y);
     uint16_t dz = dxy / k;
     uint16_t dxy0 = (dxy - k * dz) / 2;
     uint16_t dx0 = x - dxy + dxy0;
@@ -230,8 +230,8 @@ bool displayValue(uint8_t slot, String name, measure_s * value, String unit)
     (*value).value = ((int32_t)(10 * (*value).value + 5)) / 10.0;
     bool result = ((*value).value != (*value).oldValue);
     (*value).oldValue = (*value).value;
-    (*value).maximum = max((*value).maximum, (*value).value);
-    (*value).minimum = min((*value).minimum, (*value).value);
+    (*value).maximum = hV_HAL_max((*value).maximum, (*value).value);
+    (*value).minimum = hV_HAL_min((*value).minimum, (*value).value);
 
     myScreen.setPenSolid(true);
     myScreen.setFontSolid(true);
