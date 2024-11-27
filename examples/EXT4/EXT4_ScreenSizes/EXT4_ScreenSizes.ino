@@ -1,5 +1,5 @@
 ///
-/// @file EXT4_Sizes.ino
+/// @file EXT4_ScreenSizes.ino
 /// @brief Example of features for EXT4 board and sensors
 ///
 /// @details Project Pervasive Displays Library Suite

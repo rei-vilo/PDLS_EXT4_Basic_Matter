@@ -81,7 +81,7 @@ One-button menu | About
 --- | ---
 ![](img/EXT4_6.gif) | ![](img/EXT4_5.png)
 
-### EXT4 sizes example
+### EXT4 screen sizes example
 
 The EXT4 extension board and the `PDLS_EXT4_Basic_Matter` library support the monochrome screens with wide temperature and embedded fast update (film `K`) up to 2.90".
 
@@ -118,7 +118,7 @@ The EXT4 extension board and the `PDLS_EXT4_Basic_Matter` library support the mo
 ### EXT4 sensors examples
 
 * EXT4_WhoAmI
-* EXT4_Sizes
+* EXT4_ScreenSizes
 * EXT4_LargeFont
 * EXT4_Accelerometer
 * EXT4_Weather
