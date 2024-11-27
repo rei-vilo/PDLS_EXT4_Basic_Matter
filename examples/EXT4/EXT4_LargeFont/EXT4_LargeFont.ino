@@ -146,14 +146,14 @@ void setup()
 
 #if (DISPLAY_MULTIPLIER == 1)
 
-    mySerial.println("DISPLAY_MULTIPLIER... ");
+    mySerial.println("DISPLAY_MULTIPLIER");
     myScreen.clear();
     displayMultiplier();
     wait(8);
 
 #endif  // DISPLAY_MULTIPLIER
 
-    mySerial.println("Regenerate... ");
+    mySerial.println("Regenerate");
     myScreen.regenerate();
 
     mySerial.println("=== ");

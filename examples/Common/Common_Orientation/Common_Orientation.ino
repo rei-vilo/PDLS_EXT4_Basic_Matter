@@ -105,16 +105,16 @@ void setup()
     mySerial.println();
 
     // Start
-    mySerial.println("begin... ");
+    mySerial.println("begin");
     myScreen.begin();
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
-    mySerial.println("Orientation... ");
+    mySerial.println("Orientation");
     myScreen.clear();
     displayOrientation();
     wait(8);
 
-    mySerial.println("Regenerate... ");
+    mySerial.println("Regenerate");
     myScreen.regenerate();
 
     mySerial.println("=== ");

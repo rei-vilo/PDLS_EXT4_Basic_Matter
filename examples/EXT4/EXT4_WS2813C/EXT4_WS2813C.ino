@@ -52,8 +52,8 @@ void wsFromTo(uint8_t fromRed, uint8_t fromGreen, uint8_t fromBlue,
               uint8_t steps, uint16_t ms)
 {
     mySerial.print(formatString("From %3i.%3i.%3i to %3i.%3i.%3i in %4i steps and %6i ms\n", fromRed, fromGreen, fromBlue,
-                    toRed, toGreen, toBlue,
-                    steps, ms));
+                                toRed, toGreen, toBlue,
+                                steps, ms));
     uint16_t workRed, workGreen, workBlue;
 
     for (uint8_t i = 0; i < steps; i += 1)

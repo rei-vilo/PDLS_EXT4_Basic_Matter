@@ -182,7 +182,7 @@ void hV_HAL_Wire_transfer(uint8_t address, uint8_t * dataWrite, size_t sizeWrite
 ///
 /// @name Miscellaneous
 /// @details Patches for implementations on some platforms
-/// 
+///
 /// @{
 
 ///
@@ -192,14 +192,14 @@ void hV_HAL_Wire_transfer(uint8_t address, uint8_t * dataWrite, size_t sizeWrite
 /// @param a first number
 /// @param b second number
 /// @return minimum of a and b
-/// 
+///
 /// @note Macro more robust than bugged implementation on some platforms
 ///
 #define hV_HAL_min(a, b) ((a) < (b) ? (a) : (b))
 
 ///
 /// @brief Maximum of two numbers
-/// 
+///
 /// @param a first number
 /// @param b second number
 /// @return maximum of a and b

@@ -226,6 +226,7 @@ uint32_t roundUp(uint32_t value, uint16_t modulo)
 }
 
 // // Utilities
+// Moved to hV_HAL_Peripherals
 // void swap(uint16_t & a, uint16_t & b)
 // {
 //     uint16_t w = a;

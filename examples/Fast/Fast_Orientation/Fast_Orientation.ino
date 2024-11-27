@@ -111,20 +111,20 @@ void setup()
     mySerial.println("=== " __DATE__ " " __TIME__);
     mySerial.println();
 
-    mySerial.print("begin... ");
+    mySerial.print("begin");
     myScreen.begin();
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
 #if (DISPLAY_FAST_ORIENTATION == 1)
 
-    mySerial.println("DISPLAY_FAST_ORIENTATION... ");
+    mySerial.println("DISPLAY_FAST_ORIENTATION");
     myScreen.clear();
     displayFastOrientation();
     wait(4);
 
 #endif // DISPLAY_FAST_ORIENTATION
 
-    mySerial.println("Regenerate... ");
+    mySerial.println("Regenerate");
     myScreen.regenerate();
 
     mySerial.println("=== ");

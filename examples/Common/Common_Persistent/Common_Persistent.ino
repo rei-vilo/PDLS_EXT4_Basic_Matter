@@ -124,13 +124,13 @@ void setup()
         delay(250);
     }
 
-    mySerial.println("begin... ");
+    mySerial.println("begin");
     myScreen.begin();
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
 #if (DISPLAY_PERSISTENT == 1)
 
-    mySerial.println("DISPLAY_PERSISTENT... ");
+    mySerial.println("DISPLAY_PERSISTENT");
     myScreen.clear();
     displayPersistent();
     wait(2);

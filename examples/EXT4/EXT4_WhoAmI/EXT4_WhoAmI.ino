@@ -149,14 +149,14 @@ void setup()
 
 #if (DISPLAY_WHOAMI == 1)
 
-    mySerial.println("Who Am I... ");
+    mySerial.println("DISPLAY_WHOAMI");
     myScreen.clear();
     displayWhoAmI();
     wait(8);
 
 #endif  // DISPLAY_WHOAMI
 
-    mySerial.println("Regenerate... ");
+    mySerial.println("Regenerate");
     myScreen.regenerate();
 
     mySerial.println("=== ");

@@ -1,5 +1,5 @@
 ///
-/// @file Common_Forms.ino
+/// @file EXT4_Sizes.ino
 /// @brief Example of features for basic edition
 ///
 /// @details Project Pervasive Displays Library Suite
@@ -10,7 +10,7 @@
 /// @version 810
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
-/// @copyright All rights reserved
+/// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
 /// * Basic edition: for hobbyists and for basic usage
@@ -44,11 +44,17 @@
 #include "hV_Configuration.h"
 
 // Set parameters
+#define DISPLAY_SIZES 1
 
 // Define structures and classes
 
 // Define variables and constants
 // PDLS
+// Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_152_KS_0J, boardArduinoNanoMatter);
+// Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_206_KS_0E, boardArduinoNanoMatter);
+// Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_213_KS_0E, boardArduinoNanoMatter);
+// Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_266_KS_0C, boardArduinoNanoMatter);
+// Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_271_KS_0C, boardArduinoNanoMatter);
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, boardArduinoNanoMatter);
 // Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, boardSiLabsBG24Explorer);
 
@@ -70,35 +76,41 @@ void wait(uint8_t second)
 }
 
 // Functions
+#if (DISPLAY_SIZES == 1)
+
 ///
-/// @brief Basic forms test screen
-/// @param flag true = default = perform flush, otherwise no
+/// @brief Displays x.y size
 ///
-/// @image html T2_FORMS.jpg
-/// @image latex T2_FORMS.PDF width=10cm
-///
-void displayForms(bool flag = true)
+void displayWhoAmI()
 {
-    myScreen.setOrientation(7);
+    myScreen.setOrientation(ORIENTATION_LANDSCAPE);
+    myScreen.selectFont(fontMedium);
 
-    uint16_t x = myScreen.screenSizeX();
-    uint16_t y = myScreen.screenSizeY();
-    uint16_t z = hV_HAL_min(x, y);
+    uint16_t x = 4;
+    uint16_t y = 4;
+    uint16_t dy = myScreen.characterSizeY();
 
-    myScreen.setPenSolid(false);
-    myScreen.dRectangle(0, 0, x, y, myColours.black);
-    myScreen.dLine(0, 0, x, y, myColours.black);
+    myScreen.gText(x, y, formatString("x %i", myScreen.screenSizeX()));
+    y += dy;
+    myScreen.gText(x, y, formatString("y %i", myScreen.screenSizeY()));
+    y += dy;
 
     myScreen.setPenSolid(true);
-    myScreen.circle(x / 3, y / 3, z / 4, myColours.grey);
-    // myScreen.triangle(x*2/3, y/3, x/2, y*2/3, x*3/4, y*2/3-10, myColours.black);
-    myScreen.triangle(x * 2 / 3, y / 3, x * 3 / 4, y * 2 / 3 - 10, x - 10, 10, myColours.black);
-    myScreen.dRectangle(x / 3, y * 2 / 3, x / 3, y / 4, myColours.grey);
+    myScreen.dRectangle(x + dy * 0, y, dy - 1, dy - 1, myColours.black);
+    myScreen.setPenSolid(false);
+    myScreen.dRectangle(x + dy * 1, y, dy - 1, dy - 1, myColours.black);
+
+    myScreen.selectFont(fontSmall);
+    char * text = myScreen.screenNumber();
+    x = myScreen.screenSizeX() - myScreen.stringSizeX(text) - 4;
+    y = myScreen.screenSizeY() - myScreen.characterSizeY() - 4;
+    myScreen.gText(x, y, text);
 
     myScreen.flush();
 }
 
-// Add setup code
+#endif // DISPLAY_SIZES
+
 ///
 /// @brief Setup
 ///
@@ -113,23 +125,24 @@ void setup()
     mySerial.println();
 
     // Start
-    mySerial.print("begin");
     myScreen.begin();
-    mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
-    mySerial.print("Forms");
+#if (DISPLAY_SIZES == 1)
+
+    mySerial.println("DISPLAY_SIZES");
     myScreen.clear();
-    displayForms();
+    displayWhoAmI();
     wait(8);
 
-    mySerial.print("Regenerate");
+#endif // DISPLAY_SIZES
+
+    mySerial.println("Regenerate");
     myScreen.regenerate();
 
     mySerial.println("=== ");
     mySerial.println();
 }
 
-// Add loop code
 ///
 /// @brief Loop, empty
 ///

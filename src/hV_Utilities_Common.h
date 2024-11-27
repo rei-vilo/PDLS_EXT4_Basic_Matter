@@ -167,14 +167,14 @@ uint32_t roundUp(uint32_t value, uint16_t modulo);
 // /// @param b second number
 // ///
 // void swap(int16_t & a, int16_t & b);
-// 
+//
 // ///
 // /// @brief Swap number, uint16_t
 // /// @param a first number
 // /// @param b second number
 // ///
 // void swap(uint16_t & a, uint16_t & b);
-// 
+//
 // ///
 // /// @brief Swap number, uint8_t
 // /// @param a first number
