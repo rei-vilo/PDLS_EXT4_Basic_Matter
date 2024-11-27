@@ -46,9 +46,11 @@
 // Define structures and classes
 
 // Define variables and constants
-// --- Fast
+// Board
 pins_t myBoard = boardArduinoNanoMatter;
 // pins_t myBoard = boardSiLabsBG24Explorer;
+
+// Screen
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 
 // HDC2080
@@ -141,7 +143,7 @@ void setup()
     mySerial.println("=== " __DATE__ " " __TIME__);
     mySerial.println();
 
-    // Start
+    // Screen
     myScreen.begin();
     // myScreen.setPowerProfile(POWER_MODE_AUTO, POWER_SCOPE_GPIO_ONLY);
     myScreen.regenerate(); // Clear buffer and screen
