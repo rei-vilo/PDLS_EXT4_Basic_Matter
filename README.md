@@ -88,13 +88,9 @@ The EXT4 extension board and the `PDLS_EXT4_Basic_Matter` library support the mo
 1.52" | 2.06"
 --- | ---
 ![](img/EXT4_152_KS.png) | ![](img/EXT4_206_KS.png) 
-
-2.13" | 2.66"
---- | ---
+**2.13"** | **2.66"**
 ![](img/EXT4_213_KS.png) | ![](img/EXT4_266_KS.png) 
-
-2.71" | 2.90"
---- | ---
+**2.71"** | **2.90"**
 ![](img/EXT4_271_KS.png) | ![](img/EXT4_290_KS.png)
 
 ## Examples
