@@ -221,13 +221,15 @@ void displayValue(bool flag)
             uint8_t wsRed = r * wsLimit / 255;
             uint8_t wsGreen = g * wsLimit / 255;
             uint8_t wsBlue = b * wsLimit / 255;
-            myRGB.set_pixel(wsRed, wsGreen, wsBlue);
+
+            // Release 2.2.0 replaces set_pixel() by set_all()
+            myRGB.set_all(wsRed, wsGreen, wsBlue);
             mySerial.print(formatString("Setting bulb color to > r: %u  g: %u  b: %u", r, g, b));
             mySerial.println();
         }
         else
         {
-            myRGB.set_pixel(0, 0, 0);
+            myRGB.set_all(0, 0, 0);
         }
     }
 
@@ -570,7 +572,7 @@ void setup()
 
     // --- WS2812
     myRGB.begin();
-    myRGB.set_pixel(0, 0, 0);
+    myRGB.set_all(0, 0, 0);
     // --- End of WS2812
 
     // --- Matter
@@ -681,7 +683,7 @@ void loop()
         case 2:
 
             mySerial.println("> Exit");
-            myRGB.set_pixel(0, 0, 0);
+            myRGB.set_all(0, 0, 0);
             myScreen.regenerate();
             while (1)
             {

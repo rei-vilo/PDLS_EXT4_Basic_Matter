@@ -145,6 +145,7 @@ void setup()
     myScreen.begin();
     mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
 
+    // Example
 #if (DISPLAY_CHARACTERS == 1)
 
     mySerial.println("DISPLAY_CHARACTERS");

@@ -63,12 +63,13 @@ void wsFromTo(uint8_t fromRed, uint8_t fromGreen, uint8_t fromBlue,
         workBlue = fromBlue + (toBlue - fromBlue) * i / steps;
         mySerial.print(formatString("Step %3i: %3i.%3i.%3i\n", i, workRed, workGreen, workBlue));
 
-        myRGB.set_pixel(workRed, workGreen, workBlue);
+        // Release 2.2.0 replaces set_pixel() by set_all()
+        myRGB.set_all(workRed, workGreen, workBlue);
         delay(ms);
     }
 
     mySerial.print(formatString("Step %3i: %3i.%3i.%3i\n", steps, toRed, toGreen, toBlue));
-    myRGB.set_pixel(toRed, toGreen, toBlue);
+    myRGB.set_all(toRed, toGreen, toBlue);
 
     delay(ms);
     Serial.println("---");
@@ -90,36 +91,36 @@ void setup()
 
     myRGB.begin();
     mySerial.println("Black");
-    myRGB.set_pixel(0, 0, 0);
+    myRGB.set_all(0, 0, 0);
 
     delay(500);
     mySerial.println("White");
-    myRGB.set_pixel(21, 21, 21);
+    myRGB.set_all(21, 21, 21);
     delay(500);
     mySerial.println("Black");
-    myRGB.set_pixel(0, 0, 0);
+    myRGB.set_all(0, 0, 0);
     delay(500);
 
     mySerial.println("Red");
-    myRGB.set_pixel(64, 0, 0);
+    myRGB.set_all(64, 0, 0);
     delay(500);
     mySerial.println("Yellow");
-    myRGB.set_pixel(32, 32, 0);
+    myRGB.set_all(32, 32, 0);
     delay(500);
     mySerial.println("Green");
-    myRGB.set_pixel(0, 64, 0);
+    myRGB.set_all(0, 64, 0);
     delay(500);
     mySerial.println("Cyan");
-    myRGB.set_pixel(0, 32, 32);
+    myRGB.set_all(0, 32, 32);
     delay(500);
     mySerial.println("Blue");
-    myRGB.set_pixel(0, 0, 64);
+    myRGB.set_all(0, 0, 64);
     delay(500);
     mySerial.println("Violet");
-    myRGB.set_pixel(32, 0, 32);
+    myRGB.set_all(32, 0, 32);
     delay(500);
     mySerial.println("Black");
-    myRGB.set_pixel(0, 0, 0);
+    myRGB.set_all(0, 0, 0);
 
     // wsFromTo(0, 0, 0, 64, 0, 0, 16, 100);
     // wsFromTo(64, 0, 0, 0, 64, 0, 16, 100);
