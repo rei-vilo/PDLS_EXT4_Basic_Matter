@@ -75,7 +75,6 @@ void wsFromTo(uint8_t fromRed, uint8_t fromGreen, uint8_t fromBlue,
     Serial.println("---");
 }
 
-// Add setup code
 ///
 /// @brief Setup
 ///
@@ -133,7 +132,6 @@ void setup()
     mySerial.println();
 }
 
-// Add loop code
 ///
 /// @brief Loop, empty
 ///

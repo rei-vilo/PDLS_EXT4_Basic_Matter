@@ -151,7 +151,7 @@ Software
 * SPI library
 * Wire library
 * [QRCode library](https://www.arduino.cc/reference/en/libraries/qrcode/) to generate the QR-codes
-* [Silicon Labs Arduino Core](https://github.com/siliconlabs/arduino)
+* [Silicon Labs Arduino Core](https://github.com/siliconlabs/arduino) release `2.2.0` or later
 
 Hardware
 

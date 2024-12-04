@@ -549,7 +549,6 @@ void displayDecommissioning()
 }
 // --- End of Matter
 
-// Add setup code
 ///
 /// @brief Setup
 ///
@@ -568,7 +567,7 @@ void setup()
     myScreen.setPowerProfile(POWER_MODE_AUTO, POWER_SCOPE_GPIO_ONLY);
     myScreen.regenerate(); // Clear buffer and screen
 
-    myScreen.setOrientation(3);
+    myScreen.setOrientation(ORIENTATION_LANDSCAPE);
 
     // --- WS2812
     myRGB.begin();
@@ -660,6 +659,9 @@ void setup()
     displayValue(false);
 }
 
+///
+/// @brief Loop
+///
 void loop()
 {
     displayIdenfication();
