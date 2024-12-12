@@ -20,8 +20,8 @@
 /// @author Tamas Jozsi (Silicon Labs)
 ///
 /// @author Rei Vilo
-/// @date 21 Nov 2024
-/// @version 810
+/// @date 12 Dec 2024
+/// @version 811
 ///
 /// @copyright (c) Rei Vilo, 2010-2024
 /// * 2024-06-06 Rei Vilo (Pervasive Displays)
@@ -45,7 +45,8 @@
 MatterColorLightbulb myMatterRGB;
 
 // WS2813C
-#include "ezWS2812gpio.h"
+// #include "ezWS2812gpio.h"
+#include "rawWS2813C.h"
 
 // PDLS
 #include "PDLS_EXT4_Basic_Matter.h"
@@ -79,7 +80,8 @@ Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 #define MATTER_EXAMPLE_RELEASE 810
 
 // WS2813
-ezWS2812gpio myRGB(1, myBoard.ledData);
+// ezWS2812gpio myRGB(1, myBoard.ledData);
+rawWS2813C myRGB(1, myBoard.ledData);
 
 static bool wsState = false;
 const uint8_t wsLimit = 64; // Limit for each RGB channel
