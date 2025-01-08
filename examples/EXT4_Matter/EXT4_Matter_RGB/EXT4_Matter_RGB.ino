@@ -77,7 +77,7 @@ pins_t myBoard = boardArduinoNanoMatter;
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 
 #define MATTER_EXAMPLE_NAME "Matter RGB"
-#define MATTER_EXAMPLE_RELEASE 810
+#define MATTER_EXAMPLE_RELEASE 811
 
 // WS2813
 // ezWS2812gpio myRGB(1, myBoard.ledData);
