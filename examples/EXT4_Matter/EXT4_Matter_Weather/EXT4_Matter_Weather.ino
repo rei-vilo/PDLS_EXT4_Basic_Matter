@@ -18,10 +18,10 @@
 /// @author Tamas Jozsi (Silicon Labs)
 ///
 /// @author Rei Vilo
-/// @date 21 Nov 2024
-/// @version 810
+/// @date 21 Jan 2025
+/// @version 812
 ///
-/// @copyright (c) Rei Vilo, 2010-2024
+/// @copyright (c) Rei Vilo, 2010-2025
 /// * 2024-06-06 Rei Vilo (Pervasive Displays)
 /// * Added support for EXT4
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
@@ -53,8 +53,8 @@ MatterHumidity myMatterHumidity;
 // PDLS
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 812)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 812
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK
@@ -79,7 +79,7 @@ pins_t myBoard = boardArduinoNanoMatter;
 Screen_EPD_EXT4_Fast myScreen(eScreen_EPD_290_KS_0F, myBoard);
 
 #define MATTER_EXAMPLE_NAME "Matter Weather"
-#define MATTER_EXAMPLE_RELEASE 810
+#define MATTER_EXAMPLE_RELEASE 812
 
 // HDC2080
 

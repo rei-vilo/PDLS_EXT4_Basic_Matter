@@ -8,7 +8,7 @@
 //
 // Created by Rei Vilo, 01 Jun 2013
 //
-// Copyright (c) Rei Vilo, 2010-2024
+// Copyright (c) Rei Vilo, 2010-2025
 // Licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 // For exclusive use with Pervasive Displays screens
 //
@@ -224,25 +224,4 @@ uint32_t roundUp(uint32_t value, uint16_t modulo)
     }
     return result;
 }
-
-// // Utilities
-// Moved to hV_HAL_Peripherals
-// void swap(uint16_t & a, uint16_t & b)
-// {
-//     uint16_t w = a;
-//     a = b;
-//     b = w;
-// }
-// void swap(int16_t & a, int16_t & b)
-// {
-//     int16_t w = a;
-//     a = b;
-//     b = w;
-// }
-// void swap(uint8_t & a, uint8_t & b)
-// {
-//     uint8_t w = a;
-//     a = b;
-//     b = w;
-// }
 

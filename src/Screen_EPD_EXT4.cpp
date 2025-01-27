@@ -8,10 +8,10 @@
 //
 // Created by Rei Vilo, 28 Jun 2016
 //
-// Copyright (c) Rei Vilo, 2010-2024
+// Copyright (c) Rei Vilo, 2010-2025
 // Licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 // For exclusive use with Pervasive Displays screens
-// Portions (c) Pervasive Displays, 2010-2024
+// Portions (c) Pervasive Displays, 2010-2025
 //
 // Release 509: Added eScreen_EPD_EXT3_271_Fast
 // Release 527: Added support for ESP32 PSRAM

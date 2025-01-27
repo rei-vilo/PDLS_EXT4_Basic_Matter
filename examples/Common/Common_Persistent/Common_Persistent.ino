@@ -9,7 +9,7 @@
 /// @date 21 Oct 2023
 /// @version 810
 ///
-/// @copyright (c) Rei Vilo, 2010-2024
+/// @copyright (c) Rei Vilo, 2010-2025
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
@@ -29,8 +29,8 @@
 // Screen
 #include "PDLS_EXT4_Basic_Matter.h"
 
-#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 810)
-#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 810
+#if (PDLS_EXT4_BASIC_MATTER_RELEASE < 812)
+#error Required PDLS_EXT4_BASIC_MATTER_RELEASE 812
 #endif // PDLS_EXT4_BASIC_MATTER_RELEASE
 
 // SDK

@@ -8,7 +8,7 @@
 //
 // Created by Rei Vilo, 21 Mar 2024
 //
-// Copyright (c) Rei Vilo, 2010-2024
+// Copyright (c) Rei Vilo, 2010-2025
 // Licence All rights reserved
 //
 // Release 800: Read OTP memory
@@ -200,18 +200,6 @@ STRING_TYPE hV_Utilities_PDLS::screenNumber()
 void hV_Utilities_PDLS::setTemperatureC(int8_t temperatureC)
 {
     u_temperature = temperatureC;
-
-    // uint8_t u_temperature2;
-    // if (u_temperature < 0)
-    // {
-    //     u_temperature2 = -u_temperature;
-    //     u_temperature2 = (uint8_t)(~_temperature2) + 1; // 2's complement
-    // }
-    // else
-    // {
-    //     u_temperature2 = u_temperature;
-    // }
-    // indexE5_data[0] = u_temperature2;
 }
 
 void hV_Utilities_PDLS::setTemperatureF(int16_t temperatureF)
