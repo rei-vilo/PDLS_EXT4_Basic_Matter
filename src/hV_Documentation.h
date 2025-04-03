@@ -7,7 +7,7 @@
 ///
 /// @mainpage Pervasive Displays Library Suite - Basic edition for EXT4 and EPDK-Matter
 ///
-/// @details The Pervasive Displays Library Suite is specifically designed for the [Pervasive Displays](https://www.pervasivedisplays.com/) e-paper screens and EXT3 extension board.
+/// @details The Pervasive Displays Library Suite is specifically designed for the [Pervasive Displays](https://www.pervasivedisplays.com/) e-paper screens and EXT4 extension board.
 ///
 /// @image html Logo-PDI-text-320.jpeg
 /// @image latex Logo-PDI-text-320.pdf width=10cm
@@ -63,10 +63,12 @@
 /// @date 21 Feb 2025
 /// @version 820
 ///
+/// @copyright &copy; Pervasive Displays Inc., 2021-2025, under licence by Rei Vilo
+/// @copyright All rights reserved
+/// @copyright *For exclusive use with Pervasive Displays screens*
+/// @n
 /// @copyright &copy; Rei Vilo, 2010-2025
 /// @copyright All rights reserved
-/// @copyright For exclusive use with Pervasive Displays screens
-/// @copyright Portions &copy; Pervasive Displays, 2010-2025
 ///
 /// * Basic edition: for hobbyists and for basic usage
 /// @n Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
@@ -94,49 +96,53 @@
 ///
 /// Examples are under the examples folders.
 ///
-/// * Common
-///     * Common_Colours.ino
+/// **Common**
+///
+/// * Common_Colours.ino
 /// @image html T2_PALET.jpg
 /// @image latex T2_PALET.jpg width=8cm
-///     * Common_Fonts.ino
+/// * Common_Fonts.ino
 /// @image html T2_FONTS.jpg
 /// @image latex T2_FONTS.jpg width=8cm
-///     * Common_Orientation.ino
+/// * Common_Orientation.ino
 /// @image html T2_ORIEN.jpg
 /// @image latex T2_ORIEN.jpg width=8cm
-///     * Common_Forms.ino
+/// * Common_Forms.ino
 /// @image html T2_FORMS.jpg
 /// @image latex T2_FORMS.jpg width=8cm
-///     * Common_Text.ino
+/// * Common_Text.ino
 /// @image html T2_CHARA.jpg
 /// @image latex T2_CHARA.jpg width=8cm
-///     * Common_WhoAmI.ino
+/// * Common_WhoAmI.ino
 /// @image html T2_WHOAMI.jpg
 /// @image latex T2_WHOAMI.jpg width=8cm
 ///
-/// * Fast update
-///     * Fast_Line.ino
-///     * Fast_Orientation.ino
-///     * Fast_Speed.ino
+/// **Fast update**
+///
+/// * Fast_Line.ino
+/// * Fast_Orientation.ino
+/// * Fast_Speed.ino
 /// @image html Fast.png
 /// @image latex Fast.png width=8cm
 ///
-/// * EXT4
-///     * EXT4_Accelerometer.ino
-///     * EXT4_Weather.ino
+/// **EXT4**
+///
+/// * EXT4_Accelerometer.ino
+/// * EXT4_Weather.ino
 /// @image html EXT4_3.png
 /// @image latex EXT4_3.png width=8cm
-///     * EXT4_WhoAmI.ino
-///     * EXT4_WS2813C.ino
-///     * EXT4_LargeFont.ino
+/// * EXT4_WhoAmI.ino
+/// * EXT4_WS2813C.ino
+/// * EXT4_LargeFont.ino
 /// @image html EXT4_7.png
 /// @image latex EXT4_7.png width=8cm
 ///
-/// * EXT4_Matter
-///     * EXT4_Matter_RGB.ino
+/// **EXT4_Matter**
+///
+/// * EXT4_Matter_RGB.ino
 /// @image html EXT4_4.png
 /// @image latex EXT4_4.png width=8cm
-///     * EXT4_Matter_Weather.ino
+/// * EXT4_Matter_Weather.ino
 /// @image html EXT4_3.png
 /// @image latex EXT4_3.png width=8cm
 ///
