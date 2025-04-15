@@ -288,6 +288,7 @@
 #define eScreen_EPD_290_KS_0F SCREEN(SIZE_290, FILM_K, DRIVER_F) ///< reference xE2290KS0Fx
 #define eScreen_EPD_370_KS_0C SCREEN(SIZE_370, FILM_K, DRIVER_C) ///< reference xE2370KS0Cx
 #define eScreen_EPD_417_KS_0D SCREEN(SIZE_417, FILM_K, DRIVER_D) ///< reference xE2417KS0Dx
+#define eScreen_EPD_437_KS_0C SCREEN(SIZE_437, FILM_K, DRIVER_C) ///< reference xE2437KS0Cx, not tested
 #define eScreen_EPD_581_KS_06 SCREEN(SIZE_581, FILM_K, DRIVER_6) ///< reference xE2581KS06x
 #define eScreen_EPD_741_KS_06 SCREEN(SIZE_741, FILM_K, DRIVER_6) ///< reference xE2741KS06x
 // #define eScreen_EPD_969_KS_0B SCREEN(SIZE_969, FILM_K, DRIVER_B) ///< reference xE2969KS0Bx, not tested

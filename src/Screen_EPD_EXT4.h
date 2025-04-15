@@ -12,10 +12,11 @@
 /// * 266-KS-0C
 /// * 271-KS-09
 /// * 290-KS-0F
+/// * 437-PS-0C
 ///
 /// @author Rei Vilo
-/// @date 21 Feb 2025
-/// @version 820
+/// @date 21 Apr 2025
+/// @version 821
 ///
 /// @copyright (c) Rei Vilo, 2010-2025
 /// @copyright All rights reserved
@@ -81,7 +82,7 @@
 ///
 /// @brief Library release number
 ///
-#define SCREEN_EPD_EXT3_RELEASE 820
+#define SCREEN_EPD_EXT3_RELEASE 821
 
 ///
 /// @brief Library variant

@@ -37,6 +37,7 @@
 // Release 803: Added types for string and frame-buffer
 // Release 804: Improved power management
 // Release 810: Added support for EXT4
+// Release 821: Added 437-PS-0C
 //
 
 // Library header
@@ -204,7 +205,7 @@ void Screen_EPD_EXT4_Fast::COG_SmallKP_getDataOTP()
         case eScreen_EPD_266_KS_0C:
         case eScreen_EPD_266_PS_0C:
         case eScreen_EPD_271_KS_0C: // 2.71(A)
-        case eScreen_EPD_350_KS_0C:
+        // case eScreen_EPD_350_KS_0C:
         case eScreen_EPD_370_KS_0C:
         case eScreen_EPD_370_PS_0C:
         case eScreen_EPD_370_PS_0C_Touch:
