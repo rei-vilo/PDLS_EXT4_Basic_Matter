@@ -8,6 +8,10 @@ The Pervasive Displays Library Suite is specifically designed for the [Pervasive
 
 ![](https://pdls.pervasivedisplays.com/userguide/img/Logo_PDI_text_320.png)
 
+> ### The library **PDLS_EXT4_Basic_Matter** turns legacy. 
+>
+> As a replacement, use the [PDLS_Basic](https://github.com/rei-vilo/PDLS_Basic) library, with dedicated examples for the [EXT4](https://github.com/rei-vilo/PDLS_Basic/tree/main/examples/EXT4) and [EPDK-Matter](https://github.com/rei-vilo/PDLS_Basic/tree/main/examples/EXT4_Matter).
+
 The **PDLS\_EXT4\_Basic\_Matter** library supports the screens
 
 * iTC [monochrome screens with wide temperature and embedded fast update](https://www.pervasivedisplays.com/products/?_sft_etc_itc=pu&_sft_temperature_range=m15c-to-p60c) (film `K`), up to 2.9";

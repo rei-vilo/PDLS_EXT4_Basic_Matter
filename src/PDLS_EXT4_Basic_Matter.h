@@ -6,8 +6,8 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Jan 2025
-/// @version 812
+/// @date 21 Jul 2025
+/// @version 822
 ///
 /// @copyright (c) Rei Vilo, 2010-2025
 /// @copyright All rights reserved
@@ -41,7 +41,7 @@
 ///
 /// @brief Library release number
 ///
-#define PDLS_EXT4_BASIC_MATTER_RELEASE 812
+#define PDLS_EXT4_BASIC_MATTER_RELEASE 822
 
 #include "Screen_EPD_EXT4.h"
 
