@@ -41,7 +41,7 @@ The Pervasive Displays Library Suite provides a high-level interface to drive th
 
 ## Documentation
 
-* [Knowledge Base](https://docs.pervasivedisplays.com/knwoledge/)
+* [Knowledge Base](https://docs.pervasivedisplays.com/knowledge/)
 
 ## Support
 
