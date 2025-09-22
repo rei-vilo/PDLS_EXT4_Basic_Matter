@@ -7,10 +7,10 @@
 ///
 /// @author Rei Vilo
 /// @date 21 Sep 2025
-/// @version 921
+/// @version 822
 ///
 /// @copyright (c) Rei Vilo, 2010-2025
-/// @copyright All rights reserved
+/// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 /// @copyright For exclusive use with Pervasive Displays screens
 ///
 /// * Basic edition: for hobbyists and for basic usage
@@ -82,7 +82,7 @@ void wait(uint8_t second)
 ///
 void displayWhoAmI()
 {
-    myScreen.setOrientation(3);
+    myScreen.setOrientation(ORIENTATION_LANDSCAPE);
     uint16_t x = 4;
     uint16_t y = 4;
 
@@ -123,13 +123,13 @@ void displayWhoAmI()
         {
             myScreen.dRectangle(x + dy * 3, y, dy - 1, dy - 1, myColours.yellow);
         }
-#endif  // WITH_COLOURS_BWRY
+#endif // WITH_COLOURS_BWRY
     }
 
     myScreen.flush();
 }
 
-#endif  // DISPLAY_WHOAMI
+#endif // DISPLAY_WHOAMI
 
 // Add setup code
 ///
@@ -157,7 +157,7 @@ void setup()
     displayWhoAmI();
     wait(8);
 
-#endif  // DISPLAY_WHOAMI
+#endif // DISPLAY_WHOAMI
 
     mySerial.println("Regenerate");
     myScreen.regenerate();

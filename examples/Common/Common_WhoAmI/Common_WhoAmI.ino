@@ -6,8 +6,8 @@
 /// @n Based on highView technology
 ///
 /// @author Rei Vilo
-/// @date 21 Jan 2025
-/// @version 812
+/// @date 21 Sep 2025
+/// @version 822
 ///
 /// @copyright (c) Rei Vilo, 2010-2025
 /// @copyright Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
@@ -83,19 +83,29 @@ void wait(uint8_t second)
 void displayWhoAmI()
 {
     myScreen.setOrientation(ORIENTATION_LANDSCAPE);
-    myScreen.selectFont(Font_Terminal12x16);
-
     uint16_t x = 4;
     uint16_t y = 4;
+
+    myScreen.selectFont(Font_Terminal12x16);
+    myScreen.gText(x, y, "Who Am I");
+    myScreen.gText(x + 1, y, "Who Am I");
+    y += myScreen.characterSizeY();
+
+    myScreen.selectFont(Font_Terminal8x12);
     uint16_t dy = myScreen.characterSizeY();
-    myScreen.gText(x, y, myScreen.WhoAmI());
+
+    myScreen.gText(x, y, formatString("%8s %s", "Screen", myScreen.WhoAmI().c_str()));
     y += dy;
-    myScreen.gText(x, y, formatString("Size %i x %i", myScreen.screenSizeX(), myScreen.screenSizeY()));
+    myScreen.gText(x, y, formatString("%8s %ix%i", "Size", myScreen.screenSizeX(), myScreen.screenSizeY()));
     y += dy;
-    myScreen.gText(x, y, formatString("Number %s", myScreen.screenNumber()));
+    String text = myScreen.screenNumber();
+    myScreen.gText(x, y, formatString("%8s %s", "Number", text.c_str()));
     y += dy;
-    myScreen.gText(x, y, formatString("PDLS %s v%i.%i.%i", SCREEN_EPD_EXT3_VARIANT, SCREEN_EPD_EXT3_RELEASE / 100, (SCREEN_EPD_EXT3_RELEASE / 10) % 10, SCREEN_EPD_EXT3_RELEASE % 10));
+    myScreen.gText(x, y, formatString("%8s %s v%i.%i.%i", "PDLS", SCREEN_EPD_EXT3_VARIANT, SCREEN_EPD_EXT3_RELEASE / 100, (SCREEN_EPD_EXT3_RELEASE / 10) % 10, SCREEN_EPD_EXT3_RELEASE % 10));
     y += dy;
+
+    myScreen.gText(x, y, formatString("%8s", "Colours"));
+    x += myScreen.characterSizeX() * 8;
     myScreen.setPenSolid(true);
     myScreen.dRectangle(x + dy * 0, y, dy - 1, dy - 1, myColours.black);
     myScreen.setPenSolid(false);
@@ -136,9 +146,9 @@ void setup()
     mySerial.println();
 
     // Start
-    mySerial.println("begin");
     myScreen.begin();
-    mySerial.println(formatString("%s %ix%i", myScreen.WhoAmI().c_str(), myScreen.screenSizeX(), myScreen.screenSizeY()));
+    // myScreen.setPowerProfile(POWER_MODE_AUTO, POWER_SCOPE_GPIO_ONLY);
+    myScreen.regenerate();  // Clear buffer and screen
 
 #if (DISPLAY_WHOAMI == 1)
 
